@@ -1,0 +1,42 @@
+
+*************************
+DATAtoAbymod Instructions
+*************************
+
+$LOCATION is where DATAtoAbymod.jar is located
+$DATA is where all the files are made, stored, and read
+
+1. Copy abpdblib directory from abymod1.14/DATA into $DATA
+
+2. Copy Redundant_LH_Combined_Martin.txt into $DATA
+$DATA should only contain the abpdblib and the redundancy text file at this time.
+
+3. Go to $LOCATION and run "java -jar DATAtoAbymod.jar $DATA"
+$DATA should have a Sequences folder and an empty Models folder, as well as Commands.txt.
+
+4. In $DATA, run "source Commands.txt"
+The generated files will appear in Models.  This may take ~20 hours.
+
+************************
+ProFitSetup Instructions
+************************
+
+$LOCATION is where ProFitSetup.jar is located
+$DATA is where all the files are made, stored, and read
+$PROFIT is ProFit.help and mdm78.mat are located (i.e. ProFitV3.1)
+
+1. Copy test.pro into $DATA
+
+2. Go to $LOCATION and run "java -jar ProFitSetup.jar $DATA"
+$DATA should have an empty ProFitRaw folder, as well as ProFit.txt.
+
+3. Direct the environmental variables to the correct place.
+"export HELPDIR=$PROFIT"
+"export DATADIR=$PROFIT"
+
+4. In $DATA, run "source ProFit.txt"
+The generated files will appear in ProFitRaw.  This may take a few seconds.
+
+
+
+
